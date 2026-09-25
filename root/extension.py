@@ -3,7 +3,7 @@ state = "living room"
 while True:
     if state == "living room":
         print("You are in the living room")
-        print("Your Options: feeling hungry?, feeling tired?, feeling bored?, quit")
+        print("Your Options: feeling hungry?, feeling tired?, feeling bored?, feeling happy?, quit")
         feeling = input("How are you feeling?").strip().lower()
 
         if feeling in ["quit", "exit"]:
@@ -16,6 +16,8 @@ while True:
             state = "tired"
         elif feeling == "bored":
             state = "bored"
+        elif feeling == "happy":
+            state = "happy"
 
 # hungry state - in kitchen
     if state == "hungry":
@@ -124,3 +126,37 @@ while True:
     if feeling in ["quit", "exit"]:
         print("Goodbye!")
         exit()
+
+    elif state == "happy":
+        print("You are filled with joy and positive energy!")
+        print("Options: do a dance, call a friend, go to living room, quit")
+        feeling = input("What do you want to do? ").strip().lower()
+
+        if feeling in ["quit", "exit"]:
+            print("Goodbye!")
+            exit()
+
+        if feeling == "do a dance":
+            state = "do a dance"
+        elif feeling == "call a friend":
+            state = "call a friend"
+        elif feeling == "go to living room":
+            state = "living room"
+
+    elif state == "do a dance":
+        print("Dalexa is playing and you lowkey start hitting them moves.")
+        print("Type quit to end game")
+        feeling = input("Woohoo!").strip().lower()
+
+        if feeling in ["quit", "exit"]:
+            print("Goodbye!")
+            exit()
+
+    elif state == "call a friend":
+        print("You and your friend chat all night long!")
+        print("Type quit to end game")
+        feeling = input("hashtag fire!").strip().lower()
+
+        if feeling in ["quit", "exit"]:
+            print("Goodbye!")
+            exit()
