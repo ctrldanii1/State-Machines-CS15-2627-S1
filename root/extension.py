@@ -20,25 +20,25 @@ while True:
             state = "happy"
 
 # hungry state - in kitchen
-    if state == "hungry":
+    elif state == "hungry":
         print("You are in the kitchen")
         print("Options: cook food, stare into fridge, stay hungry, go to living room, quit")
         feeling = input("What do you want to do?").strip().lower()
 
-    if feeling in ["quit", "exit"]:
-        print("Goodbye!")
-        exit()
+        if feeling in ["quit", "exit"]:
+            print("Goodbye!")
+            exit()
 
-    if feeling == "cook food":
-        state = "cook food"
-    elif feeling == "stare into fridge":
-        state = "stare into fridge"
-    elif feeling == "stay hungry":
-        state = "stay hungry"
-    elif feeling == "go to living room": #back to start
-        state = "living room"
+        if feeling == "cook food":
+            state = "cook food"
+        elif feeling == "stare into fridge":
+            state = "stare into fridge"
+        elif feeling == "stay hungry":
+            state = "stay hungry"
+        elif feeling == "go to living room": #back to start
+            state = "living room"
 
-    if state == "cook food":
+    elif state == "cook food":
         print("You are full and good to go!")
         print("Type quit to end game")
         feeling = input("Yay").strip().lower()
@@ -89,33 +89,33 @@ while True:
         print("Type quit to end game")
         feeling = input("What do you want to do?").strip().lower()
 
-    if feeling == "play games":
-        state = "Play games"
-    elif feeling == "listen to music":
-        state = "Listen to music"
-    elif feeling == "go for walk":
-        state = "Go for walk"
-    elif feeling == "go to living room": #back to start
-        state = "living room"
+        if feeling == "play games":
+            state = "Play games"
+        elif feeling == "listen to music":
+            state = "Listen to music"
+        elif feeling == "go for walk":
+            state = "Go for walk"
+        elif feeling == "go to living room": #back to start
+            state = "living room"
 
-    if state == "Play games":
+    elif state == "Play games":
         print("You are playing Blockblast")
         print("You have a high-score of 3,826,709")
         print("Type quit to end game")
         feeling = input("").strip().lower()
 
-    if feeling in ["quit", "exit"]:
-        print("Goodbye!")
-        exit()
+        if feeling in ["quit", "exit"]:
+            print("Goodbye!")
+            exit()
 
     elif state == "Listen to music":
         print("You are listening to Kid Cudi")
         print("Type quit to end game")
         feeling = input("").strip().lower()
 
-    if feeling in ["quit", "exit"]:
-        print("Goodbye!")
-        exit()
+        if feeling in ["quit", "exit"]:
+            print("Goodbye!")
+            exit()
 
     elif state == "Go for walk":
         print("Cool breeze hits you, dogs barking, kids laughing")
@@ -123,9 +123,9 @@ while True:
         print("Type quit to end game")
         feeling = input("").strip().lower()
 
-    if feeling in ["quit", "exit"]:
-        print("Goodbye!")
-        exit()
+        if feeling in ["quit", "exit"]:
+            print("Goodbye!")
+            exit()
 
     elif state == "happy":
         print("You are filled with joy and positive energy!")
