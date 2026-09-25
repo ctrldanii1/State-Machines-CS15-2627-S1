@@ -1,55 +1,126 @@
-state = "home"
+state = "living room"
 
 while True:
+    if state == "living room":
+        print("You are in the living room")
+        print("Your Options: feeling hungry?, feeling tired?, feeling bored?, quit")
+        feeling = input("How are you feeling?").strip().lower()
 
-    if state == "home":
-        print("\nYou are at HOME.")
-        print("1. Go to school")
-        print("2. Go to the mall")
-        choice = input("What do you want to do? ").lower()
+        if feeling in ["quit", "exit"]:
+            print("Goodbye!")
+            exit()
 
-        if choice == "1":
-            state = "school"
-        elif choice == "2":
-            state = "mall"
-        else:
-            print("Invalid choice. Try again.")
+        if feeling == "hungry":
+            state = "hungry"
+        elif feeling == "tired":
+            state = "tired"
+        elif feeling == "bored":
+            state = "bored"
 
-    elif state == "school":
-        print("\nYou are at SCHOOL.")
-        print("1. Go to class")
-        print("2. Go home")
-        choice = input("What do you want to do? ").lower()
+# hungry state - in kitchen
+    if state == "hungry":
+        print("You are in the kitchen")
+        print("Options: cook food, stare into fridge, stay hungry, go to living room, quit")
+        feeling = input("What do you want to do?").strip().lower()
 
-        if choice == "1":
-            state = "class"
-        elif choice == "2":
-            state = "home"
-        else:
-            print("Invalid choice. Try again.")
+    if feeling in ["quit", "exit"]:
+        print("Goodbye!")
+        exit()
 
-    elif state == "class":
-        print("\nYou are in CLASS.")
-        print("1. Study")
-        print("2. Go to the mall")
-        choice = input("What do you want to do? ").lower()
+    if feeling == "cook food":
+        state = "cook food"
+    elif feeling == "stare into fridge":
+        state = "stare into fridge"
+    elif feeling == "stay hungry":
+        state = "stay hungry"
+    elif feeling == "go to living room": #back to start
+        state = "living room"
 
-        if choice == "1":
-            state = "school"
-        elif choice == "2":
-            state = "mall"
-        else:
-            print("Invalid choice. Try again.")
+    if state == "cook food":
+        print("You are full and good to go!")
+        print("Type quit to end game")
+        feeling = input("Yay").strip().lower()
 
-    elif state == "mall":
-        print("\nYou are at the MALL.")
-        print("1. Go home")
-        print("2. Go to school")
-        choice = input("What do you want to do? ").lower()
 
-        if choice == "1":
-            state = "home"
-        elif choice == "2":
-            state = "school"
-        else:
-            print("Invalid choice. Try again.")
+
+        if feeling in ["quit", "exit"]:
+            print("Goodbye!")
+            exit()
+
+    elif state == "stare into fridge":
+        print("You closed the refridgerator door and walked away")
+        print("Type quit to end game")
+        feeling = input("welp").strip().lower()
+
+        if feeling in ["quit", "exit"]:
+            print("Goodbye!")
+            exit()
+
+    elif state == "stay hungry":
+        print("You starved, so well oh well")
+        print("Type quit to end game")
+        feeling = input("").strip().lower()
+
+        if feeling in ["quit", "exit"]:
+            print("Goodbye!")
+            exit()
+
+    # tired - in room and sleeping
+    elif state == "tired":
+        print("You are in your bedroom feeling exhausted.")
+        print("Options: wake up, look at phone, quit")
+        print("Type quit to end game")
+        feeling = input("What do you want to do?").strip().lower()
+
+        if feeling in ["quit", "exit"]:
+            print("Goodbye!")
+            exit()
+
+        if feeling == "wake up":
+            state = "living room"  # back to living room
+        elif feeling == "look at phone":
+            state = "bored"
+
+    # bored
+    elif state == "bored":
+        print("Play games, Listen to music, Go for walk, Go to living room")
+        print("Type quit to end game")
+        feeling = input("What do you want to do?").strip().lower()
+
+    if feeling == "play games":
+        state = "Play games"
+    elif feeling == "listen to music":
+        state = "Listen to music"
+    elif feeling == "go for walk":
+        state = "Go for walk"
+    elif feeling == "go to living room": #back to start
+        state = "living room"
+
+    if state == "Play games":
+        print("You are playing Blockblast")
+        print("You have a high-score of 3,826,709")
+        print("Type quit to end game")
+        feeling = input("").strip().lower()
+
+    if feeling in ["quit", "exit"]:
+        print("Goodbye!")
+        exit()
+
+    elif state == "Listen to music":
+        print("You are listening to Kid Cudi")
+        print("Type quit to end game")
+        feeling = input("").strip().lower()
+
+    if feeling in ["quit", "exit"]:
+        print("Goodbye!")
+        exit()
+
+    elif state == "Go for walk":
+        print("Cool breeze hits you, dogs barking, kids laughing")
+        print("You felt at peace")
+        print("Type quit to end game")
+        feeling = input("").strip().lower()
+
+    if feeling in ["quit", "exit"]:
+        print("Goodbye!")
+        exit()
