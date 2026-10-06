@@ -18,6 +18,8 @@ while True:
             state = "bored"
         elif feeling == "happy":
             state = "happy"
+        else:
+            print("Invalid input. Please choose one of the options.")
 
 # hungry state - in kitchen
     elif state == "hungry":
@@ -37,17 +39,19 @@ while True:
             state = "stay hungry"
         elif feeling == "go to living room": #back to start
             state = "living room"
+        else:
+            print("Invalid input. Please choose one of the options.")
 
     elif state == "cook food":
         print("You are full and good to go!")
         print("Type quit to end game")
         feeling = input("Yay").strip().lower()
 
-
-
         if feeling in ["quit", "exit"]:
             print("Goodbye!")
             exit()
+        else:
+            print("Invalid input. Type quit to end the game.")
 
     elif state == "stare into fridge":
         print("You closed the refridgerator door and walked away")
@@ -57,6 +61,8 @@ while True:
         if feeling in ["quit", "exit"]:
             print("Goodbye!")
             exit()
+        else:
+            print("Invalid input. Type quit to end the game.")
 
     elif state == "stay hungry":
         print("You starved, so well oh well")
@@ -66,6 +72,8 @@ while True:
         if feeling in ["quit", "exit"]:
             print("Goodbye!")
             exit()
+        else:
+            print("Invalid input. Type quit to end the game.")
 
     # tired - in room and sleeping
     elif state == "tired":
@@ -82,6 +90,8 @@ while True:
             state = "living room"  # back to living room
         elif feeling == "look at phone":
             state = "bored"
+        else:
+            print("Invalid input. Choose one of the options")
 
     # bored
     elif state == "bored":
@@ -97,6 +107,9 @@ while True:
             state = "Go for walk"
         elif feeling == "go to living room": #back to start
             state = "living room"
+        else:
+            print("Invalid input. Type quit to end the game.")
+
 
     elif state == "Play games":
         print("You are playing Blockblast")
@@ -107,6 +120,9 @@ while True:
         if feeling in ["quit", "exit"]:
             print("Goodbye!")
             exit()
+        else:
+            print("Invalid input. Type quit to end the game.")
+
 
     elif state == "Listen to music":
         print("You are listening to Kid Cudi")
@@ -116,6 +132,8 @@ while True:
         if feeling in ["quit", "exit"]:
             print("Goodbye!")
             exit()
+        else:
+            print("Invalid input. Type quit to end the game.")
 
     elif state == "Go for walk":
         print("Cool breeze hits you, dogs barking, kids laughing")
@@ -126,6 +144,8 @@ while True:
         if feeling in ["quit", "exit"]:
             print("Goodbye!")
             exit()
+        else:
+            print("Invalid input. Type quit to end the game.")
 
     elif state == "happy":
         print("You are filled with joy and positive energy!")
@@ -142,6 +162,9 @@ while True:
             state = "call a friend"
         elif feeling == "go to living room":
             state = "living room"
+        else:
+            print("Invalid input. Type quit to end the game.")
+
 
     elif state == "do a dance":
         print("Dalexa is playing and you lowkey start hitting them moves.")
@@ -160,3 +183,5 @@ while True:
         if feeling in ["quit", "exit"]:
             print("Goodbye!")
             exit()
+        else:
+            print("Invalid input. Type quit to end the game.")
